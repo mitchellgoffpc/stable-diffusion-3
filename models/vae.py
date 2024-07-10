@@ -213,6 +213,7 @@ class Decoder(nn.Module):
 class AutoencoderKL(nn.Module):
     def __init__(self, config: AutoencoderKLConfig):
         super().__init__()
+        self.config = config
         self.encoder = Encoder(config)
         self.decoder = Decoder(config)
 
